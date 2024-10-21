@@ -1,6 +1,18 @@
 /* eslint-disable */
 
 function Contact() {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        fetch('/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(new FormData(form)).toString()
+        })
+        .then(() => alert('Form successfully submitted'))
+        .catch((error) => alert(error));
+    };
+
     return (
         <div className="p-8">
             <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
@@ -15,7 +27,7 @@ function Contact() {
             </ul>
             <div className="mt-8">
                 <h3 className="text-2xl font-semibold mb-4">Send me a message</h3>
-                <form name="contact" method="POST" netlify data-netlify="true" className="space-y-4">
+                <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} className="space-y-4">
                     <input type="hidden" name="form-name" value="contact" />
                     <div>
                         <label htmlFor="name" className="block mb-1">Name:</label>
