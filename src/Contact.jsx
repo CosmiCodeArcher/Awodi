@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 function Contact() {
     return (
         <div className="p-8">
@@ -13,7 +15,7 @@ function Contact() {
             </ul>
             <div className="mt-8">
                 <h3 className="text-2xl font-semibold mb-4">Send me a message</h3>
-                <form name="contact" method="POST" data-netlify="true" className="space-y-4">
+                <form name="contact" method="POST" netlify data-netlify="true" className="space-y-4">
                     <input type="hidden" name="form-name" value="contact" />
                     <div>
                         <label htmlFor="name" className="block mb-1">Name:</label>
