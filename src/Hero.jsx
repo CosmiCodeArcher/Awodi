@@ -1,16 +1,14 @@
+/* eslint-disable */
 import { useState, useEffect } from 'react'
 import Portfolio from "./Portfolio";
 import About from "./About";
 import Contact from "./Contact";
 import { saveState, loadState } from './localStorage';
 
-//Before starting
 
-function Hero () {
+function Hero ({ currentSection, setCurrentSection, lastViewedSection, setLastViewedSection }) {
     const [isVisible, setIsVisible] = useState(true)
     const [isHovering, setIsHovering] = useState(false)
-    const [currentSection, setCurrentSection] = useState(null);
-    const [lastViewedSection, setLastViewedSection] = useState(null);
 
     useEffect (() => {
         // Load the last viewed section from localStorage
@@ -26,7 +24,7 @@ function Hero () {
 
         return () => clearInterval(timer);
             
-        }, []);
+        }, [setLastViewedSection, setCurrentSection]);
 
     // Save the last viewed section whenever it changes
     useEffect(() => {
