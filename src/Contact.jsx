@@ -9,7 +9,9 @@ function Contact() {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(new FormData(form)).toString()
         })
-        .then(() => alert('Form successfully submitted'))
+        .then(() => {
+            window.location.href = '/success';
+        })
         .catch((error) => alert(error));
     };
 
