@@ -1,7 +1,7 @@
 
 function About() {
     return (
-        <div className="p-8">
+        <div className="p-4 md:p-8 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">About Me</h2>
             <p className="mb-4">
                 Hello! I&apos;m Awodi, a passionate web developer with a focus on creating 

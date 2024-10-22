@@ -41,7 +41,7 @@ function Contact() {
                         <label htmlFor="message" className="block mb-1">Message:</label>
                         <textarea id="message" name="message" required className="w-full px-3 py-2 border rounded-md" rows="4"></textarea>
                     </div>
-                    <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Send Message</button>
+                    <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 font-karla">Send Message</button>
                 </form>
             </div>
         </div>

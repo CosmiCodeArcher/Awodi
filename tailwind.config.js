@@ -8,6 +8,8 @@ export default {
     extend: {
       fontFamily: {
         'orbitron': ['Orbitron', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
+        'karla': ['Karla', 'sans-serif'],
       },
       colors: {
         vintage: {
