@@ -2,8 +2,8 @@
 function About() {
     return (
         <div className="p-4 md:p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">About Me</h2>
-            <p className="mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 font-karla">About Me</h2>
+            <p className="mb-4 text-sm md:text-base">
                 Hello! I&apos;m Awodi, a passionate web developer with a focus on creating 
                 responsive and user-friendly web applications. With a strong foundation in 
                 modern web technologies, I&apos;m constantly pushing myself to learn and grow in 
@@ -17,7 +17,7 @@ function About() {
                 numerous projects. Through this process, I&apos;ve developed a particular interest in
                 React.
             </p>
-            <p className="mb-4">
+            <p className="mb-4 text-sm md:text-base">
                 My technical toolkit includes:
                 <ul className="list-disc list-inside ml-4">
                     <li>JavaScript (ES6+)</li>

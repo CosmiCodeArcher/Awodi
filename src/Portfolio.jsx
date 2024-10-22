@@ -38,18 +38,42 @@ function Portfolio() {
     ];
 
     return (
-        <div className="p-8">
-            <h2 className="text-3xl font-bold mb-4">My Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="p-4 md:p-8 max-w-7xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 font-karla">My Projects</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {projects.map((project, index) => (
-                    <div key={index} className="border rounded-lg p-4 shadow-md">
-                        <img src={project.image} alt={project.title} className="w-full h-48 object-cover mb-4 rounded" />
-                        <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                        <p className="mb-2">{project.description}</p>
-                        <p className="mb-2">Technologies: {project.technologies.join(", ")}</p>
+                    <div key={index} className="border rounded-lg p-3 md:p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div className="aspect-video mb-3 md:mb-4 overflow-hidden rounded">
+                            <img 
+                                src={project.image} 
+                                alt={project.title} 
+                                className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <h3 className="text-lg md:text-xl font-semibold mb-2 font-karla">{project.title}</h3>
+                        <p className="text-sm md:text-base mb-2 text-gray-700">{project.description}</p>
+                        <p className="text-sm md:text-base mb-3 text-gray-600">
+                            <span className="font-semibold">Technologies:</span> {project.technologies.join(", ")}
+                        </p>
                         <div className="flex space-x-4">
-                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">GitHub</a>
-                            {project.live && <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Live Demo</a>}
+                            <a 
+                                href={project.github} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="text-modern-coral hover:text-modern-teal transition-colors duration-300 text-sm md:text-base"
+                            >
+                                GitHub
+                            </a>
+                            {project.live && (
+                                <a 
+                                    href={project.live} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="text-modern-coral hover:text-modern-teal transition-colors duration-300 text-sm md:text-base"
+                                >
+                                    Live Demo
+                                </a>
+                            )}
                         </div>
                     </div>
                 ))}
