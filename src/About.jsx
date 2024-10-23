@@ -23,7 +23,6 @@ function About() {
                     <li>JavaScript (ES6+)</li>
                     <li>React</li>
                     <li>HTML5 & CSS3</li>
-                    <li>Responsive Design</li>
                 </ul>
             </p>
             <p className="mb-4">
